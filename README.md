@@ -1,0 +1,1 @@
+Simple file transfer utility. Install aiohttp with pip, run python main.py, navigate to the webpage with a browser, and send a file. python -m http.server is awesome and I just wanted something that works in reverse.

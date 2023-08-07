@@ -11,6 +11,12 @@ with open("index.html") as f:
 async def index(request):
 	return web.Response(body=index_contents, content_type='text/html')
 
+@routes.post("/message")
+async def message(request):
+	message=await request.text()
+	print(f"message from {request.remote}:",message)
+	return web.Response(status=200)
+
 @routes.post("/file_sent")
 async def store(request):
 	reader = await request.multipart()
